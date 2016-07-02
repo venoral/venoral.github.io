@@ -1,67 +1,204 @@
 <!DOCTYPE html>
-<html>
+
+
+  <html class="light page-post">
+
+
 <head>
   <meta charset="utf-8">
   
-  <title>Vue计算属性 | undefined标题</title>
+  <title>Vue计算属性 | undefined</title>
+
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="前端,设计" />
+  
+
   <meta name="description" content="之前对JavaScript中对象属性的访问器属性做过深入了解，现在看Vue的计算属性就是如出一辙，说到底 set/get就是一种数据表现形式的语法糖，不过Vue 在vm根实例上对于数据的操作方式我还是觉得可探讨的。由于初学Vue才疏学浅，暂不做过多深入理解，只是说说自己的见解啦。
 计算属性在View模板中， Vue.js将绑定表达式限制为一个表达式。如果需要多于一个表达式的逻辑，应当使用计算属性。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Vue计算属性">
 <meta property="og:url" content="http://yoursite.com/2016/06/02/Vue计算属性/index.html">
-<meta property="og:site_name" content="undefined标题">
+<meta property="og:site_name" content="undefined">
 <meta property="og:description" content="之前对JavaScript中对象属性的访问器属性做过深入了解，现在看Vue的计算属性就是如出一辙，说到底 set/get就是一种数据表现形式的语法糖，不过Vue 在vm根实例上对于数据的操作方式我还是觉得可探讨的。由于初学Vue才疏学浅，暂不做过多深入理解，只是说说自己的见解啦。
 计算属性在View模板中， Vue.js将绑定表达式限制为一个表达式。如果需要多于一个表达式的逻辑，应当使用计算属性。">
-<meta property="og:updated_time" content="2016-06-01T18:14:28.339Z">
+<meta property="og:updated_time" content="2016-06-03T07:03:36.321Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vue计算属性">
 <meta name="twitter:description" content="之前对JavaScript中对象属性的访问器属性做过深入了解，现在看Vue的计算属性就是如出一辙，说到底 set/get就是一种数据表现形式的语法糖，不过Vue 在vm根实例上对于数据的操作方式我还是觉得可探讨的。由于初学Vue才疏学浅，暂不做过多深入理解，只是说说自己的见解啦。
 计算属性在View模板中， Vue.js将绑定表达式限制为一个表达式。如果需要多于一个表达式的逻辑，应当使用计算属性。">
+
   
-    <link rel="alternative" href="/atom.xml" title="undefined标题" type="application/atom+xml">
+
   
+    <link rel="icon" href="/favicon.ico">
   
-    <link rel="icon" href="/favicon.png">
+
+  <link href="/css/styles.css?v=028c63b1" rel="stylesheet">
+
+
   
-  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/personal-style.css">
   
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?57e94d016e201fba3603a8a2b0263af0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
 
 </head>
+
 <body>
-  <div id="container">
-    <div id="wrap">
-      <div class="outer">
-        <section id="main"><article id="post-Vue计算属性" class="article article-type-post" itemscope itemprop="blogPost">
+
+
   
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      Vue计算属性
-    </h1>
+    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
   
 
-      </header>
-    
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">盒子</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives/"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category/"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            target="_blank"
+            >
+            RSS
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#计算属性"><span class="toc-text">计算属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#this-aa和this-data-aa"><span class="toc-text">this.aa和this.$data.aa</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-text">总结</span></a></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-Vue计算属性" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">Vue计算属性</h1>
+
     <div class="article-meta">
-      <a href="/2016/06/02/Vue计算属性/" class="article-date">
-  <time datetime="2016-06-01T18:14:28.339Z" itemprop="datePublished">2016-06-02</time>
-</a>
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2016.06.02</span>
+      </span>
+
       
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>venoral</span>
+        </span>
+      
+
+      
+
+
+      
+        <span>
+          <i class="icon-comment"></i>
+          <a href="http://www.forsigner.com/2016/06/02/Vue计算属性/#disqus_thread"></a>
+        </span>
+      
+
     </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>之前对JavaScript中对象属性的访问器属性做过深入了解，现在看Vue的计算属性就是如出一辙，说到底 set/get就是一种数据表现形式的语法糖，不过Vue 在vm根实例上对于数据的操作方式我还是觉得可探讨的。由于初学Vue才疏学浅，暂不做过多深入理解，只是说说自己的见解啦。</p>
+  </header>
+
+  <div class="article-content">
+    
+      <p>之前对JavaScript中对象属性的访问器属性做过深入了解，现在看Vue的计算属性就是如出一辙，说到底 set/get就是一种数据表现形式的语法糖，不过Vue 在vm根实例上对于数据的操作方式我还是觉得可探讨的。由于初学Vue才疏学浅，暂不做过多深入理解，只是说说自己的见解啦。</p>
 <h2 id="计算属性"><a href="#计算属性" class="headerlink" title="计算属性"></a>计算属性</h2><p>在View模板中， Vue.js将绑定表达式限制为一个表达式。如果需要多于一个表达式的逻辑，应当使用计算属性。<br>计算属性默认只是 getter ，所以你可以这样写：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line">    &#123;&#123; aa &#125;&#125;</span><br><span class="line">    &#123;&#123; bb &#125;&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> vm1 = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">    el: <span class="string">'#app'</span>,</span><br><span class="line">    data: &#123;</span><br><span class="line">        aa: <span class="number">1</span>,</span><br><span class="line">        bb: <span class="number">0</span></span><br><span class="line">    &#125;,</span><br><span class="line">    computed: &#123;</span><br><span class="line">        bb: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">this</span>.aa + <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <p>结果：div中被渲染为1 2 。<br>完整的 computed还有set的，所以代码为：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line">    &#123;&#123; firstName &#125;&#125;</span><br><span class="line">    &#123;&#123; lastName &#125;&#125;</span><br><span class="line">    &#123;&#123; fullName &#125;&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> vm2 = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">    el: <span class="string">'#app'</span>,</span><br><span class="line">    data: &#123;</span><br><span class="line">        firstName: <span class="string">'A'</span>,</span><br><span class="line">        lastName: <span class="string">'B'</span>,</span><br><span class="line">        fullName: <span class="string">'A B'</span></span><br><span class="line">    &#125;,</span><br><span class="line">    computed: &#123;</span><br><span class="line">        fullName: &#123;</span><br><span class="line">            set: <span class="function"><span class="keyword">function</span>(<span class="params">value</span>)</span>&#123;</span><br><span class="line">                <span class="keyword">var</span> names = value.split(<span class="string">' '</span>)</span><br><span class="line">                <span class="keyword">this</span>.firstName = names[<span class="number">0</span>]</span><br><span class="line">                <span class="keyword">this</span>.lastName = names[names.length - <span class="number">1</span>]</span><br><span class="line">             &#125;,</span><br><span class="line">            get: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">this</span>.firstName + <span class="string">' '</span> + <span class="keyword">this</span>.lastName</span><br><span class="line">            &#125;    </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <h2 id="this-aa和this-data-aa"><a href="#this-aa和this-data-aa" class="headerlink" title="this.aa和this.$data.aa"></a>this.aa和this.$data.aa</h2><p>知识点并没有什么难理解的，而我的关注点在<code>this.aa</code>和<code>this.$data.aa</code> 。<code>this</code>指的是<code>vm</code>这个对象，我发现<code>this.aa</code>和<code>this.$data.aa</code> 在没有<code>computed</code>情况下，默认是指向同一个数据（数据形式可以是数值，数组对象等）的。就拿<code>vm1</code>来说，只对<code>bb</code>声明了计算属性，当程序执行后访问<code>vm1.bb</code>值为<code>2</code>，访问<code>vm1.$data.bb</code>值为<code>0</code>，此时修改<code>vm1.bb</code>或<code>vm1.$data.bb</code>的值并不会相互影响对方 。对<code>aa</code>没有声明计算属性，访问<code>vm1.aa == vm1.$data.aa</code>。</p>
-<p>现在模板中数据是以<code></code>形式呈现的，其实就是<code>this.aa</code>的值（作用域下的<code>aa</code>属性的数据，和angular的<code>$scope.bb</code>挺像），这里你也可以把<code></code>改写成<code></code>，这样就会和真正的内层数据同步了，而不用受<code>vｍ1.bb</code>的影响除非在<code>computed</code>中会改变内层数据的值 。其实想想，<code>vｍ1.bb</code>是不是就是对<code>vm1.$data.bb</code>的一层封装，起的是对外接口的作用。</p>
+<p>现在模板中数据是以形式呈现的，其实就是<code>this.aa</code>的值（作用域下的<code>aa</code>属性的数据，和angular的<code>$scope.bb</code>挺像），这里你也可以把改写成，这样就会和真正的内层数据同步了，而不用受<code>vｍ1.bb</code>的影响除非在<code>computed</code>中会改变内层数据的值 。其实想想，<code>vｍ1.bb</code>是不是就是对<code>vm1.$data.bb</code>的一层封装，起的是对外接口的作用。</p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><blockquote>
 <ul>
 <li>当没有声明<code>computed</code>时候，<code>this.aa</code>和<code>this.$data.aa</code> 默认是指向同一个数据，对<code>this.aa</code>所做的<code>set/get</code>操作均会同步反映着<code>this.$data.aa</code>，因为它两指向同一个数据嘛。</li>
@@ -69,77 +206,196 @@
 </ul>
 </blockquote>
 
-      
-
-      
-        
-    </div>
-  </div>
-  
     
-<nav id="article-nav">
-  
-  
-    <a href="/2016/05/30/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Hello World</div>
-    </a>
-  
-</nav>
-
-  
+  </div>
 </article>
 
-</section>
-        <aside id="sidebar">
-  <nav class="menus">
-  	<ul>
-  		<li><a href="/"><i class="icon icon-home"></i></a></li>
-  		
-			<li><a href="/archives"><i class="icon icon-fenlei"></i></a></li>
-  		
-  		
-			<li><a href="/tags"><i class="icon icon-tag"></i></a></li>
-  		
-  		
-  			<li><a href="https://github.com/" target="_blank"><i class="icon icon-github"></i></a></li>
-  		
-  	</ul>
-  </nav>
-  <a id="go-top" href="#"><i class="icon icon-up"></i></a>
-</aside>
+</div>
+
+
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">支持一下</span>
+      <div class="donation-body">
+        <div class="tip text-center">扫一扫</div>
+        <ul class="theme.donation.items.length">
+        
+          <li class="item">
+            <img src="/images/qr-wechat.png" alt="">
+          </li>
+        
+          <li class="item">
+            <img src="/images/qr-alipay.png" alt="">
+          </li>
+        
+        </ul>
       </div>
-      <footer id="footer">
-  
-	<div id="footer-info" class="inner">
-	  &copy; 2016 venoral 
-	  - Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-	  - Theme <a href="https://github.com/Alex-fun/hexo-theme-jane/" target="_blank">Jane</a>
-	</div>
-</footer>
     </div>
-    <nav id="mobile-nav">
+  </div>
+
+
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives/"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category/"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
   
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-    <a href="/tags" class="mobile-nav-link">Tag</a>
-  
-    <a href="https://github.com/" class="mobile-nav-link">Github</a>
-  
-</nav>
+      <div class="fexo-comments comments-post">
+    
+  <section class="disqus-comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+  <script>
+    var disqus_shortname = 'forsigner';
+    
+    var disqus_url = 'http://yoursite.com/2016/06/02/Vue计算属性/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <script id="dsq-count-scr" src="//forsigner.disqus.com/count.js" async></script>
+
+
+
     
 
-<script src="//cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script>
 
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-<script src="/js/script.js"></script>
 
   </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
 </body>
 </html>
