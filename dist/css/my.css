@@ -1,0 +1,71 @@
+.title {
+    margin: 50px 0 25px;
+}
+.title img {
+    width: 140px;
+    border-radius: 50%;
+}
+.side-info dd {
+    text-align: center;
+}
+.skill-name {
+    left: -13px;
+}
+.skill-bar-wrap {
+    width: 155px;
+}
+
+li,ul{
+	margin: 12px;
+}
+.side-info li {
+    text-align: center;
+    margin-bottom: 25px;
+}
+.skill{
+    margin-top: 200px;
+}
+.skill dd{
+	margin-bottom: 10px;
+}
+
+.side-info dd {
+    font-size: 17px;
+    line-height: 20px;
+}
+
+.sidebar{
+	width: 310px;
+}
+.main{
+	left: 310px;
+}
+
+.someRight dd {
+    text-align: center;
+    margin-left: 0;
+}
+
+.skillinfo h4{
+    left: 20px;
+}
+.skillinfo{
+    margin-bottom: 50px;
+}
+.skillinfo li{
+    top: 0;
+    margin-bottom: 5px;
+}
+.sidebar, aside li {
+    background: rgba(77,182,172,0.4);
+}
+
+.side-info dt {
+    font-size: 18px;
+    color: #004d40;
+    line-height: 40px;
+}
+
+.note{
+    margin-top: 140px;
+}
